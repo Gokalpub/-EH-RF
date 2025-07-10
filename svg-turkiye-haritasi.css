@@ -1,0 +1,42 @@
+/*! SVG Türkiye Haritası | CSS | MIT Lisans | dnomak.com */
+
+.svg-turkiye-haritasi {
+  max-width: 1500px; /* Harita boyutu, isteğe göre artırıldı */
+  margin: 0 auto;
+  text-align: center;
+  position: relative; 
+}
+.svg-turkiye-haritasi svg {
+  width: 100%;
+  height: auto;
+}
+.il-isimleri {
+  position: absolute;
+  z-index: 2;
+}
+.il-isimleri div {
+  font-family: 'Open Sans', sans-serif; /* Font family eklendi */
+  display: inline-block;
+  background: transparent; /* Arka plan şeffaf yapıldı */
+  color: #fff; /* Yazı rengi beyaz */
+  padding: 0; /* Padding kaldırıldı */
+  border: none; /* Border kaldırıldı */
+  font-weight: bold; /* Daha epik görünüm için kalın yapıldı */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.9), -1px -1px 2px rgba(0,0,0,0.9), 1px -1px 2px rgba(0,0,0,0.9), -1px 1px 2px rgba(0,0,0,0.9); /* Yazıya daha belirgin gölge eklendi */
+}
+
+#svg-turkiye-haritasi path {
+  cursor: pointer;
+  fill: #222; /* Haritanın varsayılan şehir rengi (koyu) */
+  transition: fill 0.3s ease; /* Renk geçişi için animasyon */
+}
+#svg-turkiye-haritasi path:hover {
+  fill: #1094F6;
+}
+#guney-kibris, #kuzey-kibris {
+  pointer-events: none; /* Bu bölgelerin tıklanmasını engelle */
+}
+#guney-kibris path, #kuzey-kibris path {
+  fill: #888 !important; /* Güney ve Kuzey Kıbrıs'ı gri yap */
+  cursor: default !important; /* İmleci varsayılan olarak ayarla */
+}
